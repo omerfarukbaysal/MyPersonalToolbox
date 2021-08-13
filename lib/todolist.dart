@@ -18,8 +18,7 @@ class _ToDoListState extends State<ToDoList> {
   void navigateToDetail(ToDo note, String title) async {
     bool result =
         await Navigator.push(context, MaterialPageRoute(builder: (context) {
-      print("detaya git!");
-      return null; //NoteDetail(note, title);
+      return null;
     }));
     if (result == true) {
       updateListView();
@@ -53,9 +52,7 @@ class _ToDoListState extends State<ToDoList> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    print("testq");
   }
 
   @override
@@ -94,7 +91,6 @@ class _ToDoListState extends State<ToDoList> {
             leading: Checkbox(
               value: this.noteList[position].isChecked,
               onChanged: (bool value) {
-                print(this.noteList[position].id);
                 setState(() {
                   this.noteList[position].isChecked = value;
                 });

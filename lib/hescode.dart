@@ -55,7 +55,6 @@ class _HesCodeState extends State<HesCode> {
                 onPressed: () {
                   if (formKey.currentState.validate()) {
                     formKey.currentState.save();
-                    print(hesCode);
                     saveHesCode();
                   }
                 },

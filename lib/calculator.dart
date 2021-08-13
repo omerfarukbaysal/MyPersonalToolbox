@@ -94,11 +94,9 @@ class _CalculatorState extends State<Calculator> {
                     labelText: 'Number *',
                   ),
                   onSaved: (String value) {
-                    debugPrint("çalıştı");
                     number1 = int.parse(value);
                   },
                   onChanged: (String value) {
-                    debugPrint(value.isEmpty.toString());
                     calculate(value);
                   },
                   validator: (String value) {
